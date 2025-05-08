@@ -3,125 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi Proyecto · GitHub Pages</title>
+  <title>Portafolio • Arturo Paniagua</title>
   <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
   <style>
+    :root {
+      --primario: #0366d6;
+      --fondo: #f6f8fa;
+      --texto: #24292e;
+      --blanco: #ffffff;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
       line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f6f8fa;
-      color: #24292e;
     }
-    header, footer {
-      background-color: #24292e;
-      color: #ffffff;
+    header {
+      background: var(--primario);
+      color: var(--blanco);
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
+    header h1 { margin-bottom: .5rem; }
+    header p { font-size: 1.1rem; }
     nav {
-      background-color: #0366d6;
-      padding: 0.5rem;
       text-align: center;
+      background: #fafbfc;
+      padding: .5rem;
+      border-bottom: 1px solid #e1e4e8;
     }
     nav a {
-      color: #ffffff;
-      margin: 0 1rem;
+      margin: 0 .75rem;
       text-decoration: none;
-      font-weight: bold;
+      color: var(--primario);
+      font-weight: 600;
     }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
-      background: #ffffff;
+    }
+    section + section { margin-top: 3rem; }
+    h2 {
+      color: var(--primario);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primario);
+      display: inline-block;
+      padding-bottom: .25rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--blanco);
+      border: 1px solid #e1e4e8;
       border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    section + section {
-      margin-top: 2rem;
-    }
-    h1, h2 {
-      color: #0366d6;
-    }
-    pre {
-      background: #f0f0f0;
       padding: 1rem;
-      overflow-x: auto;
-      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    code {
-      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
-      background: #f0f0f0;
-      padding: 0.1em 0.3em;
-      border-radius: 4px;
+    .project-card h3 {
+      margin-bottom: .5rem;
+      font-size: 1.2rem;
     }
+    .project-card p { flex-grow: 1; }
+    .project-card a {
+      margin-top: 1rem;
+      text-decoration: none;
+      color: var(--blanco);
+      background: var(--primario);
+      padding: .5rem .75rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      font-size: .9rem;
+      color: #586069;
+      padding: 2rem 1rem;
+    }
+    footer a { color: inherit; text-decoration: underline; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Nombre de Tu Proyecto</h1>
-  <p>Descripción breve de lo que hace tu proyecto.</p>
-</header>
+  <header>
+    <h1>Arturo Alejandro Paniagua Romero</h1>
+    <p>Python Developer • Flask • FastAPI • Azure • Docker • Data & ML Enthusiast</p>
+  </header>
 
-<nav>
-  <a href="#about">Acerca de</a>
-  <a href="#install">Instalación</a>
-  <a href="#usage">Uso</a>
-  <a href="#contribute">Contribuir</a>
-  <a href="#license">Licencia</a>
-</nav>
+  <nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </nav>
 
-<main>
-  <section id="about">
-    <h2>Acerca de</h2>
-    <p>Explica en detalle el propósito de tu proyecto, sus principales características y a quién está dirigido.</p>
-  </section>
+  <main>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy desarrollador de software con experiencia en automatización de procesos, micro-servicios y análisis de datos.  
+        He trabajado en integración de APIs, despliegue en Azure y contenedorización con Docker, asegurando calidad mediante
+        pruebas unitarias y revisiones de código en CI/CD.  
+      </p>
+      <p>
+        Actualmente estudiante de Ingeniería en Computación en Tecnológico de Monterrey (Clase de 2026), 
+        siempre en búsqueda de nuevos retos y aprendizaje continuo.  
+      </p>
+      <p>
+        <a href="Arturo_Paniagua_CV.pdf" download>⬇️ Descargar mi CV (PDF)</a>
+      </p>
+    </section>
 
-  <section id="install">
-    <h2>Instalación</h2>
-    <p>Pasos para instalar dependencias y preparar el entorno:</p>
-    <pre><code>git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
-npm install  # o el gestor de paquetes que uses
-    </code></pre>
-  </section>
+    <section id="projects">
+      <h2>Proyectos Destacados</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Streaming Platform (C++)</h3>
+          <p>Modelo de usuario-admin con revisión y auditoría, aplicado a servicios de streaming de video bajo demanda.</p>
+          <a href="https://github.com/ArturoPaniagua-portfolio/Modelado-de-servicio-de-streaming" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>SARS-CoV-2 Genomic Analysis (R)</h3>
+          <p>Análisis filogenético de secuencias de coronavirus para 9 especies similares al SARS-CoV-2 original.</p>
+          <a href="https://github.com/ArturoPaniagua-portfolio/-Virus-SARS-CoV-2-un-analisis-profundo" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>IoT Smart Monitoring (Azure)</h3>
+          <p>Conexión de datos de sensores a Azure para monitoreo en tiempo real de frecuencia cardiaca, humedad y temperatura.</p>
+          <a href="https://github.com/ArturoPaniagua-portfolio/vitaSense-IOT" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Portfolio (HTML)</h3>
+          <p>Este sitio web de portafolio personal, construido con HTML5 y CSS3 para mostrar mis proyectos y experiencia.</p>
+          <a href="https://github.com/ArturoPaniagua-portfolio/Portfolio" target="_blank">Ver en GitHub</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="usage">
-    <h2>Uso</h2>
-    <p>Ejemplos básicos de uso:</p>
-    <pre><code>npm start              # Ejecuta la aplicación en modo desarrollo
-npm run build            # Genera la versión de producción
-# O bien:
-python main.py --help    # Muestra opciones disponibles
-    </code></pre>
-  </section>
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>📍 Mexico City, MX</p>
+      <p>✉️ <a href="mailto:paniagua.arturo12@gmail.com">paniagua.arturo12@gmail.com</a></p>
+      <p>📞 +52 56 2450 0472</p>
+      <p>🔗 <a href="https://linkedin.com/in/arturo-paniagua12" target="_blank">linkedin.com/in/arturo-paniagua12</a></p>
+    </section>
+  </main>
 
-  <section id="contribute">
-    <h2>Contribuir</h2>
-    <p>¡Las contribuciones son bienvenidas! Para colaborar:</p>
-    <ol>
-      <li>Haz un fork de este repositorio.</li>
-      <li>Crea una rama para tu feature: <code>git checkout -b feature/nueva-funcionalidad</code>.</li>
-      <li>Realiza tus cambios y haz commit: <code>git commit -m "Añade nueva funcionalidad"</code>.</li>
-      <li>Haz push a tu fork: <code>git push origin feature/nueva-funcionalidad</code>.</li>
-      <li>Abre un Pull Request describiendo tu aporte.</li>
-    </ol>
-  </section>
-
-  <section id="license">
-    <h2>Licencia</h2>
-    <p>Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo <code>LICENSE</code>.</p>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 Tu Nombre o Tu Organización</p>
-  <p><a href="https://github.com/tu-usuario/tu-repo" style="color: #ffffff;">Ver en GitHub</a></p>
-</footer>
+  <footer>
+    &copy; 2025 Arturo Paniagua.  
+    <br>
+    <a href="https://github.com/ArturoPaniagua-portfolio" target="_blank">Mi perfil en GitHub</a>
+  </footer>
 
 </body>
 </html>
